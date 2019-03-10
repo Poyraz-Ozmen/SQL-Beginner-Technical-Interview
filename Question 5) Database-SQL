@@ -1,0 +1,7 @@
+SELECT U.username, U.emailaddress
+FROM i_users U
+WHERE U.username!='Administrator' and U.userId IN   (SELECT I.userId) 
+													FROM i_user_login_logs I
+													GROUP BY  I.userId
+													HAVING COUNT(I.userId) >= MAX( COUNT(I.userId) )
+													)
