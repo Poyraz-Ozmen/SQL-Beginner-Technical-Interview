@@ -1,0 +1,4 @@
+SELECT COUNT(I.userId) 
+FROM i_user_login_logs I
+GROUP BY  I.userId
+HAVING COUNT(I.userId) > 3
