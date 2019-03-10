@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int swap_without_third_variable(int &x, int &y) 
+void swap_without_third_variable(int &x, int &y) 
 { 
     // Code to swap 'x' and 'y' in C++ 
     x = x + y; 
